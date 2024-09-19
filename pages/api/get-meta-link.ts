@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { JSDOM } from 'jsdom';
 import { NextApiRequest, NextApiResponse } from 'next';
 
@@ -52,7 +53,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         'upgrade-insecure-requests': '1',
         'Referrer-Policy': 'origin-when-cross-origin',
       },
-      body: null,
+      body: undefined,
       method: 'GET',
     });
 
