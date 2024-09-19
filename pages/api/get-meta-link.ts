@@ -57,7 +57,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     });
 
     const html = await r.text();
+
     const data = getMetaDataFromHTML(html);
+
+    console.log(data);
 
     res.status(200).json({ result: data });
   } catch {
